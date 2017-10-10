@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 public class Chip {
 	@Id
-	private int chipID;
+	private Long chipID;
 	
 	//Name
 	private String chipName;
@@ -27,7 +27,17 @@ public class Chip {
 	private int multipliesWithElem;
 	private int overrideMultiplier;
 	
-	public int getChipID() {
+	public Chip() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Chip(Long chipID, String chipName) {
+		super();
+		this.chipID = chipID;
+		this.chipName = chipName;
+	}
+	
+	public Long getChipID() {
 		return chipID;
 	}
 	public String getChipName() {
@@ -57,4 +67,5 @@ public class Chip {
 	public int getElemAmountB() {
 		return elemAmountB;
 	}
+	
 }
